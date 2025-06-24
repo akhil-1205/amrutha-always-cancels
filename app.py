@@ -1,4 +1,3 @@
-
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 import pandas as pd
@@ -17,11 +16,9 @@ creds = ServiceAccountCredentials.from_json_keyfile_name("service-account.json",
 client = gspread.authorize(creds)
 
 
-
-# Open the Google Sheet (by name or URL)
+# Open the Google Sheet
 spreadsheet = client.open("Amrutha Always Cancels")
-sheet = spreadsheet.sheet1  # You can also use .worksheet("Sheet2") if needed
-
+sheet = spreadsheet.sheet1  
 
 
 # Get all rows as raw data
@@ -49,5 +46,11 @@ for idx, row in df.iterrows():
     st.write(f"📅 **Event Date**: `{row['When was the event?']}`")
     st.write(f"💬 **Excuse**: *{row['What was her \"excuse\"?']}*`")
     st.markdown("---")  # horizontal separator between entries
+
+# Add form link section
+st.markdown("## Are you a victim too? You are not alone!")
+st.markdown("### [Click here to report a new cancellation](https://forms.gle/XRzjKL8kS692WyFm7)", unsafe_allow_html=True)
+
+
 
 

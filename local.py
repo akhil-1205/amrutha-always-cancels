@@ -47,3 +47,7 @@ for idx, row in df.iterrows():
     st.markdown("---")  # horizontal separator between entries
 
 
+# Add form link section
+st.markdown("## Are you a victim too? You are not alone!")
+st.markdown("### [Click here to report a new cancellation](https://forms.gle/XRzjKL8kS692WyFm7)", unsafe_allow_html=True)
+
