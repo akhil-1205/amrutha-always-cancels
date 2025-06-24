@@ -3,11 +3,7 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 import pandas as pd
 import streamlit as st
-import json
-import os
 
-with open("service-account.json", "w") as f:
-    f.write(os.getenv("GOOGLE_CREDS_JSON"))
 
 # Define scope
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
