@@ -44,7 +44,7 @@ for idx, row in df.iterrows():
     st.subheader(f"Event {idx + 1}: {row['What event did she cancel?']}")
     #st.write(f"🕒 **Timestamp**: `{row['Timestamp']}`")
     st.write(f"📅 **Event Date**: `{row['When was the event?']}`")
-    st.write(f"💬 **Excuse**: *{row['What was her \"excuse\"?']}*`")
+    st.write(f"💬 **Excuse**: *{row['What was her \"excuse\"?']}*")
     st.markdown("---")  # horizontal separator between entries
 
 # Add form link section
